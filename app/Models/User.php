@@ -12,6 +12,11 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function produits() {
+        return $this->hasMany(Produit::class); 
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,6 +36,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'updated_at', 
+        'created_at'
     ];
 
     /**

@@ -16,15 +16,18 @@ class ProduitSeeder extends Seeder
         DB::table('produits')->delete();
         DB::table('produits')->insert([
         'nom' => 'Choux',
-        'qte' => 4
+        'qte' => 4,
+        'user_id' => 2
         ]);
         DB::table('produits')->insert([
         'nom' => 'Beurre',
-        'qte' => 1
+        'qte' => 1,
+        'user_id' => 2
         ]);
         DB::table('produits')->insert([
         'nom' => 'Olives',
-        'qte' => 3
+        'qte' => 3,
+        'user_id' => 1
         ]);
 
     }
